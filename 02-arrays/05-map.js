@@ -14,3 +14,20 @@ const priceList = prices.map(price =>{
 })
 
 console.log(priceList)
+
+
+
+
+// Using map() will extract only names: ["John", "Sarah", "Mike"]
+
+const leads = [
+    { name: "John", status: "new" },
+    { name: "Sarah", status: "qualified" },
+    { name: "Mike", status: "new" }
+];
+
+const userName = leads.map(lead =>{
+    return lead.name
+})
+
+console.log(userName)
