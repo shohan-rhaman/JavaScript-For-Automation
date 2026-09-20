@@ -39,3 +39,48 @@ console.log(expensivePrices); // output: [300, 400]
 
 
 */
+
+// =================== Now Automation-style practice ============================= \\
+
+const leads = [
+    {
+        name: "John",
+        email: "john@example.com",
+        status: "new"
+    },
+    {
+        name: "Sarah",
+        email: "sarah@example.com",
+        status: "qualified"
+    },
+    {
+        name: "Mike",
+        email: "mike@example.com",
+        status: "new"
+    },
+    {
+        name: "David",
+        email: "david@example.com",
+        status: "contacted"
+    }
+];
+
+// Cue: Only the leads with the status "new" will be extracted and placed in a new array.
+
+
+const customerLeads = leads.filter(lead =>{
+    return lead.status === "new"
+})
+
+console.log(customerLeads)
+
+
+
+/*
+
+    The main point of filter(): Filter() expects true/false from the callback.
+
+    true → item will go into the new array
+    false → item will not go
+
+*/
