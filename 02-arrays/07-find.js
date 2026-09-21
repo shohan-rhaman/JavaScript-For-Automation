@@ -29,5 +29,22 @@ const lead = leads.find(lead =>{
 console.log(lead)
 
 
+/*
+    filter() vs find()
 
+    filter()
+   ↓
+    all matching items
+   ↓
+    Array []
+
+
+
+    find()
+   ↓
+    first matching item
+   ↓
+    an item/object
+
+*/
 
