@@ -24,6 +24,7 @@ const leads = [
 
 const lead = leads.find(lead =>{
     return lead.status === "new"
+    // return lead.email === "sarah@example.com"
 })
 
 console.log(lead)
