@@ -31,3 +31,14 @@ const customerLeads = leads.forEach(lead =>{
 })
 
 console.log(customerLeads) // [Johnz, Sarah, Mike]
+
+
+/*
+
+    Difference between forEach() and map()
+
+    map(): map uselly creates a new array
+
+    forEach(): works on each item by running action on it
+
+*/
