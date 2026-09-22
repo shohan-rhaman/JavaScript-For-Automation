@@ -11,3 +11,21 @@ const total = prices.reduce((sum, price) => {
 }, 0);
 
 console.log(total); // 600
+
+
+/*
+
+    Now we have to understand 2 things: (sum, price) and }, 0);
+
+    What is sum?
+    sum is accumulator. That means, it retains whatever has been added so far.
+    initally sum = 0. first item = 0 + 100. sencond item = 100 + 200. ........
+
+    What is price:
+    price is the current item in the array.
+
+    What is }, 0):
+    0 is the initial value — that is, the amount with which sum will start.
+
+
+*/
