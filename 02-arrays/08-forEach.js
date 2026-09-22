@@ -27,7 +27,9 @@ const leads = [
 ];
 
 const customerLeads = leads.forEach(lead =>{
-    return lead.name
+    //return lead.name
+
+    return (`${lead.name} - ${lead.status}`)
 })
 
 console.log(customerLeads) // [Johnz, Sarah, Mike]
@@ -39,6 +41,9 @@ console.log(customerLeads) // [Johnz, Sarah, Mike]
 
     map(): map uselly creates a new array
 
-    forEach(): works on each item by running action on it
+    forEach(): 
+    - works on each item by running action on it. 
+    - forEach() does not collect the returned value. 
+    - forEach() itself does not return a new array.
 
 */
