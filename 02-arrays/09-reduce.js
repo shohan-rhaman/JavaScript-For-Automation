@@ -37,3 +37,29 @@ const totalAmount = amounts.reduce((total, item)=>{
 },0)
 
 console.log(totalAmount)
+
+
+// ===================== Automation exmaple practice =========================
+const orders = [
+    {
+        id: 101,
+        customer: "Rahim",
+        amount: 7000
+    },
+    {
+        id: 102,
+        customer: "Karim",
+        amount: 5000
+    },
+    {
+        id: 103,
+        customer: "Rahim",
+        amount: 3000
+    }
+];
+
+const totalAmountCalculate = orders.reduce((total, order) => {
+    return total + order.amount
+}, 0);
+
+console.log(totalAmountCalculate);
