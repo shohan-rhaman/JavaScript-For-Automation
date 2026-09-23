@@ -29,3 +29,11 @@ console.log(total); // 600
 
 
 */
+
+amounts = [500, 1200, 800, 300]
+
+const totalAmount = amounts.reduce((total, item)=>{
+    return total + item;
+},0)
+
+console.log(totalAmount)
