@@ -63,3 +63,45 @@ const totalAmountCalculate = orders.reduce((total, order) => {
 }, 0);
 
 console.log(totalAmountCalculate);
+
+
+
+/*
+
+    Now let's learn one of the most important practical use cases of reduce(): 
+    grouping total amounts by customer. This is where reduce() becomes very powerful.
+
+
+*/
+
+const ordersData = [
+    {
+        id: 101,
+        customer: "Rahim",
+        amount: 7000
+    },
+    {
+        id: 102,
+        customer: "Karim",
+        amount: 5000
+    },
+    {
+        id: 103,
+        customer: "Rahim",
+        amount: 3000
+    }
+];
+
+// We want to get: { Rahim: 10000, Karim: 5000 }
+
+const customerTotals = ordersData.reduce((totals, order) =>{
+    return totals[order.customer] = (totals[order.customer] || 0) + order.amount
+}, {})
+
+console.log("customer totals", customerTotals)
+
+
+
+
+
+
