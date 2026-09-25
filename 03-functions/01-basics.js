@@ -64,3 +64,20 @@ function processLead(lead) {
 */
 
 processLead("John");
+
+
+// ====================== Automation Example ====================== //
+
+function processLead(lead) {
+    console.log(lead.name);
+}
+
+processLead({
+    name: "John",
+    email: "john@example.com",
+    status: "new"
+});
+
+// outPut: Jhon
+
+// we may send one object inside processLead as a value
