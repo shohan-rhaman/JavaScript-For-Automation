@@ -18,3 +18,23 @@ function greet() {
 }
 
 greet();
+
+
+
+/*
+
+    Automation Example:
+    Suppose we need to log a message every time in our automation:
+
+*/
+
+function sendNotification() {
+    console.log("Notification sent successfully");
+}
+
+sendNotification();
+sendNotification();
+sendNotification();
+
+// No need to write the same code over and over again. This is the main power of functions:
+// Write once → reuse many times
