@@ -1,0 +1,20 @@
+/*
+
+    What is Funtion?:
+    = A function is a reusable block of code that can be run repeatedly if needed.
+
+    Suppose we have 100 leads and we need to do the same thing for each lead:
+    Lead data → Process lead → Validate → Prepare message → Send
+
+    We Don't write the same logic 100 times. Create a function, then call it as needed.
+
+*/
+
+
+// 01. Function Basics
+
+function greet() {
+    console.log("Hello, AI Automation Engineer!");
+}
+
+greet();
