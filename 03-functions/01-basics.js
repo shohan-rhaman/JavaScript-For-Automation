@@ -38,3 +38,29 @@ sendNotification();
 
 // No need to write the same code over and over again. This is the main power of functions:
 // Write once → reuse many times
+
+
+/*
+
+    02 — Parameters & Arguments:
+
+    what is the parameter?:
+    The variable that we write inside the brackets when creating a function is the parameter.
+
+    more precisely: A parameter is a variable created inside a function to receive data.
+
+
+*/
+
+function processLead(lead) {
+    console.log(lead);
+}
+// here lead is a prameter
+
+
+/*
+    what is Argument?
+    = The actual value that we send when calling a function is an argument.
+*/
+
+processLead("John");
