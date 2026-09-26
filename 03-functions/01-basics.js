@@ -118,3 +118,18 @@ function cleanEmail(email){
 const cleanCustomerEamil = cleanEmail(customer.email)
 
 console.log(cleanCustomerEamil) // output: rahim@gmail.com
+
+
+// ================ problem slove ================== //
+/*
+
+    now make a funtion. function name will be cleanName. and parameter is name and argument is " Rahim ". now you have to return cleaned name
+
+*/
+
+function cleanName(name){
+    return name.trim()
+}
+
+const customerCleanName = cleanName(" Rahim ")
+console.log(customerCleanName)
