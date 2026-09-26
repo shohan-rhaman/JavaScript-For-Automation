@@ -100,3 +100,21 @@ function addNumbers(a, b) {
 const result = addNumbers(10, 20);
 
 console.log(result); // output 30
+
+
+// ================ automation example ======================= \\
+
+// suppose data has come from api
+const customer = {
+    name: "Rahim",
+    email: "RAHIM@GMAIL.COM"
+};
+
+// now we want to clean email
+function cleanEmail(email){
+    return email.trim().toLowerCase()
+}
+
+const cleanCustomerEamil = cleanEmail(customer.email)
+
+console.log(cleanCustomerEamil) // output: rahim@gmail.com
