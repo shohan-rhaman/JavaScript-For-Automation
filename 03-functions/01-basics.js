@@ -81,3 +81,22 @@ processLead({
 // outPut: Jhon
 
 // we may send one object inside processLead as a value
+
+
+
+/*
+
+    ========================= return ===========================
+    what is return?
+
+    = simply The return function sends the result inside the function outside.
+
+*/
+
+function addNumbers(a, b) {
+    return a + b;
+}
+
+const result = addNumbers(10, 20);
+
+console.log(result); // output 30
