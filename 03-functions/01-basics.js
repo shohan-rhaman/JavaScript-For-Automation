@@ -133,3 +133,14 @@ function cleanName(name){
 
 const customerCleanName = cleanName(" Rahim ")
 console.log(customerCleanName)
+
+
+
+// ====== one Important concept for function ================= //
+// After returning, the function's work is finished.
+
+function cleanName(name) {
+    return name.trim();
+
+    console.log("Hello"); // This line will not execute
+}
