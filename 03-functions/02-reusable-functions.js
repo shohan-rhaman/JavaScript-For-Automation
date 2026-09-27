@@ -45,3 +45,35 @@ processLead({
 processLead({
     name: "Sarah Smith"
 })
+
+
+
+/*
+
+    =============== Function + Array =================
+
+    Now we will use the previously learned Array + forEach() + Function together. and We will create an automation flow like this: Leads Array → forEach() → processLead() → every Lead Process
+
+    - There will be a processLead(lead) function.
+    - Need to call processLead() for each lead using forEach().
+    - Expected output:
+                     - John Doe
+                     - Sarah Smith
+                     - Mike Ross
+
+
+*/
+
+const leads = [
+    { name: "John Doe", status: "new" },
+    { name: "Sarah Smith", status: "qualified" },
+    { name: "Mike Ross", status: "new" }
+];
+
+function processLead(lead){
+    console.log(lead.name)
+}
+
+leads.forEach(lead =>{
+     processLead(lead)
+})
