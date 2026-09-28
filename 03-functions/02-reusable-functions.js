@@ -77,3 +77,33 @@ function processLead(lead){
 leads.forEach(lead =>{
      processLead(lead)
 })
+
+
+
+
+//   ========== Transforming Data with Functions ===================
+
+
+const lead = {
+    name: "  John Doe  ",
+    email: " JOHN@EXAMPLE.COM "
+};
+
+// There are two problems with this data:
+// name  → extra spaces
+// email → extra spaces + uppercase
+// but we want 
+{
+    name: "John Doe",
+    email: "john@example.com"
+}
+
+// now transform with functions
+function transformLead(lead){
+    return {
+        name: lead.name.trim(),
+        email: lead.email.trim().toLowerCase()
+    }
+}
+const output = transformLead(lead)
+console.log(output)
