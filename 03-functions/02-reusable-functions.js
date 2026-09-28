@@ -92,11 +92,14 @@ const lead = {
 // There are two problems with this data:
 // name  → extra spaces
 // email → extra spaces + uppercase
-// but we want 
-{
-    name: "John Doe",
-    email: "john@example.com"
-}
+
+/* 
+    but we want:
+    {
+        name: "John Doe",
+        email: "john@example.com"
+    } 
+*/
 
 // now transform with functions
 function transformLead(lead){
