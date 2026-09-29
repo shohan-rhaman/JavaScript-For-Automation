@@ -71,5 +71,34 @@ const customerData = {
 };
 
 const {name: customerName, email: customerEmail} = customerData
+// This is not renaming the name property of the object. Rather, it says: This is not renaming the name property of the object. Create a variable named leadName with the value of the name property of the lead object.
+
 console.log(customerName);
 console.log(customerEmail);
+
+
+
+// =============== Nested Object Destructuring ==================== \\
+const lead = {
+    name: "John Doe",
+    contact: {
+        leadEmail: "john@example.com",
+        leadPhone: "01700000000"
+    }
+};
+/*
+    Here, email and phone are not directly in the lead. They are inside the contact.
+
+    Normal way:
+        const email = lead.contact.email;
+        const phone = lead.contact.phone;
+
+    We can extract nested data directly using destructuring:
+*/
+const {
+    contact: { leadEmail, leadPhone }
+} = lead;
+// We will read it this way: Get the contact from the lead, then get the email and phone from within the contact.
+
+console.log(email);
+console.log(phone);
