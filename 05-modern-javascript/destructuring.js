@@ -30,3 +30,33 @@ console.log(email);
 console.log(status);
 
 // The variable was created directly from the property of the customer object.
+
+
+
+// ====================== Automation Example ===================== \\
+// Suppose data has come from webhook
+
+const webhookData = {
+    id: 101,
+    customer: {
+        name: "Rahim",
+        email: "rahim@example.com"
+    },
+    amount: 5000,
+    customerStatus: "paid"
+};
+/*
+    we need here just id, amount, customerStatus
+    Normal way:
+    const id = webhookData.id;
+    const amount = webhookData.amount;
+    const status = webhookData.status;
+*/
+
+const {id, amount, customerStatus} = webhookData;
+/*
+    Now we can directly:
+    console.log(id);
+    console.log(amount);
+    console.log(status);
+*/
