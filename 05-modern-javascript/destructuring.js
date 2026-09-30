@@ -137,3 +137,23 @@ const {
 console.log(name);
 console.log(email);
 console.log(phone);
+
+
+// ================== Default Value of Destructuring ========================= \\
+const lead = {
+    name: "Rahim",
+    email: "rahim@gmail.com"
+};
+// here is no status
+const { name, email, status } = lead;
+
+console.log(status); // output: undefined
+// But we want it to be "new" if there is no status.
+
+const {
+    name,
+    email,
+    status = "new"
+} = lead;
+
+console.log(status); // output: new
