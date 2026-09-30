@@ -31,3 +31,24 @@ const qualifiedLeads = ["John", "Sarah"];
 // Both together:
 const allLeads = [...newCustomerLeads, ...copiedLeads]
 console.log(allLeads); // output: ["Rahim", "Karim", "John", "Sarah"]
+
+
+
+// ================ Automation example of arrays ====================== \\
+
+// Existing leads came from CRM:
+const crmLeads = [
+    { name: "Rahim", status: "new" },
+    { name: "Karim", status: "new" }
+];
+
+// New lead arrived from webhook:
+const newLead = {
+    name: "John",
+    status: "new"
+};
+
+// new array will be:
+const updateLeads = [...crmLeads, ...newLead]
+console.log(updateLeads)
+// Here we are creating a new array without modifying the original crmLeads array.
