@@ -16,8 +16,18 @@ const newLeads = [...leads, "Sarah"];
 
 // 02. Array copy
 // We can also create a new copy of an existing array with Spread:
-const leads = ["Rahim", "Karim", "John"];
+const leadNames = ["Rahim", "Karim", "John"];
 
-const copiedLeads = [...leads];
+const copiedLeads = [...leadNames];
 
-console.log(copiedLeads);
+console.log(copiedLeads); // output: ["Rahim", "Karim", "John"]
+
+
+
+// 03. Multiple arrays merge
+const newCustomerLeads = ["Rahim", "Karim"];
+const qualifiedLeads = ["John", "Sarah"];
+
+// Both together:
+const allLeads = [...newCustomerLeads, ...copiedLeads]
+console.log(allLeads); // output: ["Rahim", "Karim", "John", "Sarah"]
