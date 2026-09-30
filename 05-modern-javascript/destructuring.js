@@ -102,3 +102,38 @@ const {
 
 console.log(email);
 console.log(phone);
+
+
+
+// ============== Practice Nested Object Destructuring  =============== \\
+const order = {
+    id: 501,
+    customer: {
+        name: "Rahim",
+        contact: {
+            email: "rahim@gmail.com",
+            phone: "01700000000"
+        }
+    },
+    amount: 7500
+};
+/*
+    Find out by destructuring:
+    - customer.name
+    - customer.contact.email
+    - customer.contact.phone
+*/
+
+const {
+    customer: {
+        name,
+        contact: {
+            email,
+            phone
+        }
+    }
+} = order;
+
+console.log(name);
+console.log(email);
+console.log(phone);
