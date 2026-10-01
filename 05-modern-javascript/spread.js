@@ -52,3 +52,19 @@ const newLead = {
 const updateLeads = [...crmLeads, ...newLead]
 console.log(updateLeads)
 // Here we are creating a new array without modifying the original crmLeads array.
+
+
+
+// ====================== Object of Spread ========================= \\
+
+const lead = {
+    name: "Rahim",
+    email: "rahim@gmail.com"
+};
+// now We want to create a new object of lead and add status to it.
+const updateLead = {
+    ...lead,
+    status: "new"
+}
+console.log(updateLead);
+
