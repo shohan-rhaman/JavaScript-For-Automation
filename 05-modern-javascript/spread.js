@@ -68,3 +68,22 @@ const updateLead = {
 }
 console.log(updateLead);
 
+
+
+// ===================== Automation example ========================= \\
+// customer data has come from crm
+const customer = {
+    name: "Rahim",
+    email: "rahim@gmail.com",
+    status: "new",
+    source: "website"
+};
+// now we have to change status new to qualified
+// We can create a new object without directly modifying the original object:
+
+const updatedCustomer = {
+    ...customer,
+    status: "qualified"
+};
+
+
