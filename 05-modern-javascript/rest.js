@@ -28,3 +28,14 @@ function totalCalculation(...amounts){
 
 const total = totalCalculation(100, 300, 150, 400, 1600);
 console.log(total) // output: 2550
+
+
+
+// ======== One important use case of rest oporator ============ \\
+
+function processOrders(customer, ...orders) {
+    console.log(customer);
+    console.log(orders);
+}
+processOrders("Rahim", 1000, 2500, 5000); // output: customer → "Rahim"  orders → [1000, 2500, 5000]
+// Rest is not just for collecting all arguments. We can collect all the remaining arguments by setting some specific parameters.
