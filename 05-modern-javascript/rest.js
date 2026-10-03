@@ -39,3 +39,45 @@ function processOrders(customer, ...orders) {
 }
 processOrders("Rahim", 1000, 2500, 5000); // output: customer → "Rahim"  orders → [1000, 2500, 5000]
 // Rest is not just for collecting all arguments. We can collect all the remaining arguments by setting some specific parameters.
+
+
+// ================ Practical Challenge for rest ================= \\
+/*
+
+    Using Destructuring + Rest:
+
+    - id is a separate variable
+    - customer is a separate variable
+    - Collect all remaining properties into orderDetails.
+
+*/
+const order = {
+    id: 501,
+    customer: "Rahim",
+    amount: 7500,
+    status: "paid",
+    paymentMethod: "card"
+};
+
+const {
+    id,
+    customer,
+    ...orderDetails
+} = order;
+
+console.log(id);
+console.log(customer);
+console.log(orderDetails);
+/*  
+    Output:
+
+    501
+    Rahim
+
+    {
+        amount: 7500,
+        status: "paid",
+        paymentMethod: "card"
+    }
+        
+*/
