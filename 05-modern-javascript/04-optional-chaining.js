@@ -41,3 +41,13 @@ const crmData = {
 const customerEmail = webhookData.customer?.contact?.email;
 console.log(email); // output: undefined
 // workflow won't crush
+
+
+// ================== One of important difference ====================== \\
+// for normal access
+lead.company.website
+// if company doesn't exist then → ❌ Error
+
+// for Optional chaining:
+lead.company?.website
+// if there is no company then → ✅ undefined
