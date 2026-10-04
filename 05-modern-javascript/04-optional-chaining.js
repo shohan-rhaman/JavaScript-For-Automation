@@ -15,3 +15,29 @@ const website = lead.company?.website;
     - If there is a company → website will be available
     - If there is no company → undefined will be available, no error will occur.
 */
+
+
+// ==================== Automation Example ==================== \\
+const webhookData = {
+    customer: {
+        name: "Rahim",
+        contact: {
+            email: "rahim@example.com",
+            phone: "01700000000"
+        }
+    }
+};
+// suppose we get data from webhook like this now we have to find out email
+const email = webhookData.customer?.contact?.email;
+console.log(email); // output: rahim@example.com
+
+// now suppose we don't have contact although we want to get email then this is the very place we can use optional chaingin
+const crmData = {
+    customer: {
+        name: "Rahim"
+    }
+};
+
+const customerEmail = webhookData.customer?.contact?.email;
+console.log(email); // output: undefined
+// workflow won't crush
