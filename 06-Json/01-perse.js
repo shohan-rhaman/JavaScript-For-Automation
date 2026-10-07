@@ -42,3 +42,25 @@ console.log(typeof leadData); // output will be object
 // now we can access the property
 console.log(leadData.name); // Rahim
 console.log(leadData.email); // rahim@example.com
+
+
+
+// ============ Automation Example ================ \\
+
+// Suppose this data comes from a webhook system:
+const webhookData = `{
+    "customer": {
+        "name": "Rahim",
+        "email": "rahim@example.com"
+    },
+    "amount": 5000
+}`;
+// It is now string
+
+const data = JSON.parse(webhookData);
+// we can do it:
+console.log(data.customer.name); // Rahim
+console.log(data.customer.email); // rahim@example.com
+console.log(data.amount); // 5000
+
+// The main task of JSON parsing is to convert JSON data received from the system into usable objects in JavaScript.
