@@ -29,5 +29,4 @@ console.log(typeof jsonData); // output: string
     JSON.parse()      →  JSON string → JavaScript value
     JSON.stringify()  →  JavaScript value → JSON string
 
-    
 */
