@@ -16,3 +16,18 @@ const customer = {
 const jsonData = JSON.stringify(customer);
 console.log(jsonData)
 // Output: {"name":"Rahim","email":"rahim@example.com","status":"new"}
+
+// Now let's type check:
+console.log(typeof customer); // Output: Object
+console.log(typeof jsonData); // output: string
+
+
+/* 
+    ============== parse() vs stringify() ===============
+
+    Method:
+    JSON.parse()      →  JSON string → JavaScript value
+    JSON.stringify()  →  JavaScript value → JSON string
+
+    
+*/
