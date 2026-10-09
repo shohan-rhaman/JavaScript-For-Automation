@@ -20,5 +20,21 @@ console.log(myPromise)
 
     resolve() — Returns the result if the Promise succeeds.
     reject() — Returns the reason for the failure if the Promise fails.
+*/
 
+
+// ========= How do We get the results of Promise? ============= \\
+const myPromise2 = new Promise((resolve, reject) =>{
+    resolve("Customer data received")
+});
+
+myPromise2.then((result) =>{
+    console.log(result)
+})
+// Customer data received
+
+/*
+    - .then() works with the result of a successful Promise.
+    - result is the value obtained through resolve().
+    - console.log(result) shows that value.
 */
