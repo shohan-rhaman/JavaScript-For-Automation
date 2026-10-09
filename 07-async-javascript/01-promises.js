@@ -38,3 +38,18 @@ myPromise2.then((result) =>{
     - result is the value obtained through resolve().
     - console.log(result) shows that value.
 */
+
+// ============= Promise usecase of Automation ======================= \\
+const leadPromis = new Promise((resolve, reject) =>{
+    resolve ({
+        name: "Shohan",
+        email: "shohan@gmail.com"
+    })
+})
+
+leadPromis.then((lead)=>{
+    console.log(lead.name);
+    console.log(lead.email);
+})
+// output: shohan & shohan@gmail.com
+// In real automation, API calls, database operations, or other asynchronous tasks can return Promises.
