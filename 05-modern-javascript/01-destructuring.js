@@ -100,8 +100,8 @@ const {
 } = lead;
 // We will read it this way: Get the contact from the lead, then get the email and phone from within the contact.
 
-console.log(email);
-console.log(phone);
+console.log(leadEmail); // john@example.com
+console.log(leadPhone); // 01700000000
 
 
 
@@ -125,6 +125,7 @@ const order = {
 */
 
 const {
+  id,
     customer: {
         name,
         contact: {
@@ -134,9 +135,10 @@ const {
     }
 } = order;
 
-console.log(name);
-console.log(email);
-console.log(phone);
+console.log(id); // 501
+console.log(name); // Rahim
+console.log(email); // rahim@gmail.com
+console.log(phone); // 01700000000
 
 
 // ================== Default Value of Destructuring ========================= \\
