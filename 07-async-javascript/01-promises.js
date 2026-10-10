@@ -99,3 +99,33 @@ crmLeadPromis.then(result =>{
     console.log(err)
 })
 // Output: Lead saved Successfull
+
+
+
+/* 
+    ===================== Practice Task ===================== 
+
+    Create a Promise, where:
+    1. isPaid = false.
+    2. If the payment is completed, resolve("Payment successful").
+    3. If the payment is not completed, reject("Payment failed").
+    4. Use .then() and .catch() to display the correct message.
+*/
+
+const paymentPromis = new Promise((resolve, reject) =>{
+    let isPaid = false;
+
+    if(isPaid){
+        resolve("Payment successful")
+    }else{
+        reject("Payment failed")
+    }
+});
+
+paymentPromis.then(result =>{
+    console.log(result)
+}).catch(err =>{
+    console.log(err)
+});
+// Output: Payment failed
+
