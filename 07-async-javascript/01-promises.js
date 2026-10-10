@@ -75,4 +75,27 @@ const customerPromise2 = new Promise((resolve, reject)=> {
 */
 customerPromise2.catch(error =>{
     console.log(error)
+});
+// output: Failed to save lead
+
+
+// =============== Real life case of automation ======================== \\
+
+// Suppose, There was a problem saving the lead in CRM. We want to handle the failure message.
+const crmLeadPromis = new Promise((resolve, reject) =>{
+    let isSaved = true;
+
+    if(isSaved){
+        resolve("Lead saved Successfull")
+    }else{
+        reject("CRM save failed")
+    }
+
+});
+
+crmLeadPromis.then(result =>{
+    console.log(result)
+}).catch(err =>{
+    console.log(err)
 })
+// Output: Lead saved Successfull
