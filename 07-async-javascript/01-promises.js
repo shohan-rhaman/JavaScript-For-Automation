@@ -53,3 +53,26 @@ leadPromis.then((lead)=>{
 })
 // output: shohan & shohan@gmail.com
 // In real automation, API calls, database operations, or other asynchronous tasks can return Promises.
+
+
+
+/*
+    Now we will learn how to handle errors when an automation task fails.
+
+    Q1: What is reject()?
+        = A Promise can be returned to a failed state using reject().
+*/
+
+const customerPromise2 = new Promise((resolve, reject)=> {
+    reject("Failed to save lead")
+});
+// Here we are saying that the lead saving operation failed.
+// But how do we handle this error? This is where .catch() comes in handy.
+/*
+    Q2: What is .catch()?
+        = Error handling of rejected Promises can be done using .catch().
+
+*/
+customerPromise2.catch(error =>{
+    console.log(error)
+})
