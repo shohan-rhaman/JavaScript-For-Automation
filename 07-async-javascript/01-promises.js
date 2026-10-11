@@ -167,3 +167,48 @@ paymentPromise
  *  Confirmation sent
  */ 
 
+
+
+// =================== Real Example of Promise Chaining ==================== \\
+
+// Suppose the order will be processed after the payment is successful.
+const paymentPromise2 = new Promise((resolve, reject) => {
+    const isPaid = true;
+
+    if (isPaid) {
+        resolve({
+            orderId: 501,
+            amount: 5000
+        });
+    } else {
+        reject("Payment failed");
+    }
+});
+
+paymentPromise2
+    .then(order => {
+        console.log("Payment verified:", order.amount);
+
+        return {
+            ...order,
+            status: "processing"
+        };
+    })
+    .then(order => {
+        console.log("Order status:", order.status);
+
+        return `Order ${order.orderId} is being processed`;
+    })
+    .then(message => {
+        console.log(message);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+/**
+ * Output:
+ * Payment verified: 5000 
+ * Order status: processing 
+ * Order 501 is being processed
+ */
