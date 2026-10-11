@@ -129,3 +129,41 @@ paymentPromis.then(result =>{
 });
 // Output: Payment failed
 
+
+/*
+    What is Promise Chaining?
+    = The method of completing work through multiple .then() calls in a row using the result of a Promise is called Promise Chaining.
+
+    Suppose, in an order processing automation:
+        1. Payment will be checked.
+        2. If payment is successful, order will be processed.
+        3. If order is processed, confirmation message will be generated.
+    These will run one after the other.
+
+*/
+
+// Example:
+const paymentPromise = new Promise((resolve, reject) => {
+    resolve("Payment successful");
+});
+
+paymentPromise
+    .then(result => {
+        console.log(result);
+        return "Order processed";
+    })
+    .then(result => {
+        console.log(result);
+        return "Confirmation sent";
+    })
+    .then(result => {
+        console.log(result);
+    });
+
+/**
+ * Output:
+ *  Payment successful 
+ *  Order processed
+ *  Confirmation sent
+ */ 
+
