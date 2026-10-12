@@ -17,3 +17,30 @@ async function getData() {
 function getData() {
     return Promise.resolve("Hello");
 }
+
+
+// ================== await Concept ======================= \\
+/*
+    What is await?
+    = await waits for the result of a Promise and returns that result if successful.
+*/
+
+function getCustomer(){
+    return Promise.resolve("Shohan")
+}
+
+async function processCustomer(){
+    const customer = await getCustomer();
+
+    console.log(customer)
+}
+
+processCustomer(); // Output: Shohan
+
+/**
+ * 1. getCustomer() returns a Promise.
+ * 2. await getCustomer() waits for the result of the Promise.
+ * 3. The result "Shohan" is stored in the customer variable.
+ * 4. console.log(customer) shows the name.
+ */
+// Important Note: await doesn't freeze the whole JavaScript program. It only makes its own async function wait until the Promise is done before moving to the next line.
