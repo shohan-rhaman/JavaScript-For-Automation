@@ -89,3 +89,35 @@ processOrder();
     - Works with Promise
 
 */
+
+/*
+    ================ Challenge Task ==========================
+
+    1. Create a function called getOrder() that will return the following object using Promise.resolve()
+        {
+            id: 101,
+            customer: "Shohan",
+            amount: 5000
+        }
+    2. Create an async function called processOrder().
+    3. Get the result of getOrder() with await.
+    3. Show the customer and amount of the order in the console.
+
+*/
+
+function getOrder(){
+    return Promise.resolve({
+        id: 101,
+        customer: "Shohan",
+        amount: 5000
+    })
+}
+
+async function processOrder(){
+    const order = await getOrder();
+
+    console.log("Customer Name: ", order.customer);
+    console.log("Amount: ", order.amount)
+}
+
+processOrder()
