@@ -44,3 +44,27 @@ processCustomer(); // Output: Shohan
  * 4. console.log(customer) shows the name.
  */
 // Important Note: await doesn't freeze the whole JavaScript program. It only makes its own async function wait until the Promise is done before moving to the next line.
+
+
+// ================= Rael Automaiton Example =================== \\
+
+function verifyPayment() {
+    return Promise.resolve({
+        orderId: 501,
+        amount: 3000,
+        paid: true
+    });
+}
+
+async function processOrder() {
+    const payment = await verifyPayment();
+
+    console.log("Order ID:", payment.orderId);
+    console.log("Payment verified:", payment.paid);
+
+    if (payment.paid) {
+        console.log("Order processing started");
+    }
+}
+
+processOrder();
