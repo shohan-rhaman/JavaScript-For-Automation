@@ -68,3 +68,24 @@ async function processOrder() {
 }
 
 processOrder();
+/**
+ * Output:
+    Order ID: 501
+    Payment verified: true
+    Order processing started
+ */
+
+/*
+    .then() VS async/await
+
+    Promise .then() :
+    - Handle the result with a callback
+    - Chain can be long
+    - Promise-এর সঙ্গে কাজ করে
+
+    async/await :
+    - Receives the result with await
+    - Easy to read in many cases
+    - Works with Promise
+
+*/
