@@ -46,3 +46,32 @@ processNewOrder(); // Failed to fetch order
  *          2 catch — Handle an error.
  *          3. error.message — Retrieves the error message.
  */
+
+
+
+/*
+    ==================== Practice Task ==================
+
+    1. Create a getPayment() function, which will return Promise.reject(new Error("Payment failed")).
+    2. Create an async function called processPayment().
+    3. Use await getPayment() inside try.
+    4. Console the error message inside the catch.
+
+*/
+
+function getPayment(){
+    return Promise.reject(
+        new Error("Payment Failed")
+    )
+}
+
+async function processPayment(){
+    try{
+        const payment = await getPayment();
+        console.log(payment)
+    }catch(error){
+        console.log(error.message)
+    }
+}
+
+processPayment(); // Output: Payment failed
