@@ -25,3 +25,39 @@ getUser()
 
 // Output: { id: 1, name: "Leanne Graham", username: "Bret", email: "Sincere@april.biz"}
 // This is sample data from the API; the response may have more properties.
+
+
+/*
+    Hole Concept:
+
+    1. fetch(url): Sends a request to the API
+    2. response: Server response is available.
+    3. response.json(): JavaScript data is parsed from a JSON body.
+    4. console.log(user): Data can be used or tested
+
+    Important note: fetch() usually does not automatically reject an HTTP 404 or 500 status.
+
+*/
+
+
+/*
+    ============= Practice Task ====================
+
+    1. Will fetch the second user's data from https://jsonplaceholder.typicode.com/users/2.
+    2. Only the user name should be shown without showing the entire object.
+    3. Only the user's email will be displayed.
+
+*/
+
+async function getUserData() {
+    const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users/2"
+    );
+
+    const userData = await response.json();
+
+    console.log(userData.name);
+    console.log(userData.email);
+}
+
+getUserData();
