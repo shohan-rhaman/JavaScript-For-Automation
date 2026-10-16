@@ -29,4 +29,17 @@ async function getUserData() {
     }
 }
 
-getUserData();
+getUserData(); // output: Leanne Graham and Sincere@april.biz
+
+
+/*
+    An important distinction:
+
+    - 200 OK from API  --->  Data will be processed
+    - 404 from API     --->  response.ok will be false, then an error will be thrown
+    - Network connection failed  --->  fetch() may reject, catch will handle that
+    - Problem parsing JSON  --->  catch can handle that too
+
+    Note: response.ok only checks the HTTP status. We may need to check separately whether there are business-level errors inside the API response.
+
+*/
