@@ -63,3 +63,15 @@ checkApiStatus();
     Request sucessful!
     User: Leanne Graham
 */
+
+
+/*
+    Difference between 401 ও 403:
+
+    401 — Authentication problem
+    = API token not provided, token invalid, or expired.
+
+    403 — Permission issue
+    = Even though the token is valid, your account does not have permission to view a specific resource.
+
+*/
