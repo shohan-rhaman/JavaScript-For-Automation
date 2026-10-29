@@ -68,6 +68,20 @@ const validCustomers = customers.filter(customer =>{
     
 });
 
+// Step 2: Clean and transform customer data
+const processedCustomers = validCustomers.map(customer => {
+    return {
+        id: customer.id,
+        name: customer.name.trim(),
+        email: customer.email.trim().toLowerCase(),
+        amount: Number(customer.amount)
+    };
+});
+
+
+// Step 3: Display results
 console.log("Valid Customers:", validCustomers);
+console.log("Processed Customers:", processedCustomers);
 console.log("Total Customers:", customers.length);
-console.log("Valid Count:", validCustomers.length);
+console.log("Valid Customers Count:", validCustomers.length);
+console.log("Processed Customers Count:", processedCustomers.length);
